@@ -1,7 +1,57 @@
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/76yZswDU"))();
 local Window1 = library:CreateSection("Main")
 
-Window1:Button("Auto Farmn Nope", function()
+Window1:Button("Auto Farm", function()
+    --By BaansuUchiha and TRP
+    
+    -- Settings
+    local SPEED = true -- may cause serious lag
+    
+    -- Variable
+    local player = game.Players.LocalPlayer
+    
+    -- Remove some stuff..
+    function del()
+        pcall(function()
+            player.Character.Defense:Destroy()
+        end)
+        for i,v in pairs(player.Character:GetChildren()) do
+            if v:IsA("Shirt") or v:IsA("Pants") then
+            end
+        end
+        for i,v in pairs(player.Character.Head:GetChildren()) do
+            if v:IsA("BillboardGui") then
+            end
+        end
+    end
+    
+    -- VELOCITY GAY
+    game:GetService("RunService").RenderStepped:Connect(function()
+       player.Character.HumanoidRootPart.Velocity = Vector3.new() 
+    end)
+    
+    -- Skrrrt
+    while true do
+        local v = workspace:FindFirstChild("Name")
+        if typeof(v) == "Instance" then
+            repeat
+                del()
+                pcall(function()
+                    player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,1)
+                end)
+                spawn(function()
+                    game.ReplicatedStorage.Remotes.Damage4:InvokeServer(v, {HitTime=0,Type="Normal",HitEffect=nil,VictimCFrame=nil,HurtAnimation=nil,Velocity=nil,Sound=nil,Damage=1})
+                end)
+                game:GetService("RunService").Heartbeat:wait()
+                game:GetService("RunService").Heartbeat:wait()
+            until not v.Parent
+        end
+        wait(.25)
+    end
+    
+    -- Bitch Please
+    game.Players.LocalPlayer.Character.Defense:Destroy()
+end)
 
 Window1:Toggle("give Bananas", function(Callback)
 getgenv().farmer = Callback
