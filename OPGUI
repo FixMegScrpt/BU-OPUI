@@ -1,0 +1,251 @@
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/76yZswDU"))();
+local Window1 = library:CreateSection("Main")
+
+Window1:Button("Auto Farmn Nope", function()
+    -
+end)
+
+Window1:Toggle("give Bananas", function(Callback)
+getgenv().farmer = Callback
+
+while true do
+    if getgenv().farmer == true then    
+                game.ReplicatedStorage.Remotes.NPCStuff:FireServer("BananasBought");
+            end
+        wait(0.5)
+    end
+end)
+
+Window1:Button("infinite Ki", function(callback)
+    game.Players.LocalPlayer.Data.Ki.Value=2e9
+    game.Players.LocalPlayer.Data.MaxKi.Value=2e9
+end)
+
+Window1:Button("infinite Stamina", function(callback)
+    game.Players.LocalPlayer.Data.MaxStamina.Value=2e9
+    game.Players.LocalPlayer.Data.Stamina.Value=2e9
+end)
+
+Window1:Button("UI Dodge w/TP", function(callback)
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    game.ReplicatedStorage.Remotes.Fly:FireServer("\235\140\128\213\161\213\180\213\162\229\139\162\227\129\174\236\137\172\227\129\132");
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\230\182\136\227\129\136\196\131\227\130\139\233\150\147\236\151\144\229\139\157\227\129\164");
+    local args = {
+        [1] = {
+            [1] = "Dodged",
+            [2] = workspace.JuelzTrainsHarder,
+        },
+}
+
+   game:GetService("ReplicatedStorage").Remotes.KiBlasts:InvokeServer(unpack(args))
+   wait(1.0)
+   game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179\227\130\170\227\131\149");
+end)
+
+Window1:Button("UI Dodge L/B", function(callback)
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    AnimationId = "3238572054"
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1)
+    wait(0.4)
+    AnimationId = "3238570761"
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1)
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\230\182\136\227\129\136\196\131\227\130\139\233\150\147\236\151\144\229\139\157\227\129\164");
+    game.ReplicatedStorage.Remotes.Fly:FireServer("\235\140\128\213\161\213\180\213\162\229\139\162\227\129\174\236\137\172\227\129\132");
+    wait(1.1)
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179\227\130\170\227\131\149");
+end)
+
+Window1:Button("UI Dodge S/B", function(callback)
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    AnimationId = "3238569974"
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(0.7)
+    wait(0.4)
+    AnimationId = "3238570761"
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(0.9)
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\230\182\136\227\129\136\196\131\227\130\139\233\150\147\236\151\144\229\139\157\227\129\164");
+    game.ReplicatedStorage.Remotes.Fly:FireServer("\235\140\128\213\161\213\180\213\162\229\139\162\227\129\174\236\137\172\227\129\132");
+    wait(1.1)
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179\227\130\170\227\131\149");
+end)
+
+
+local Window2 = library:CreateSection("Moves")
+Window2:Button("Custom Angel Flip", function(callback)
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("EffectSTA");
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\233\150\147\236\151\144\229\139\157\227\129\164");
+    AnimationId = "11479650286://"
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(0.7)
+    wait(0.4)
+end)
+
+Window2:Button("Custom Autonomous Assault", function(callback)
+    game.ReplicatedStorage.Remotes.Fly:FireServer("\235\140\128\213\161\213\180\213\162\229\139\162\227\129\174\236\137\172\227\129\132")
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\230\182\136\227\129\136\196\131\227\130\139\233\150\147\236\151\144\229\139\157\227\129\164");
+    game.ReplicatedStorage.Remotes.Fly:FireServer("\235\140\128\213\161\213\180\213\162\229\139\162\227\129\174\236\137\172\227\129\132");
+    game:GetService("ReplicatedStorage").Remotes.PhysicalSkill:FireServer("것붙スキップ이ウ쾅ータファー붙다んで")
+    wait(0.7)
+    AnimationId = "4220157891" --DashFoward
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1.0)
+    wait(0.8) --DashInAirLegnthTime
+    k:Stop() --StopAni
+    wait(0.0)
+    AnimationId = "3245446707" --MUINSTINCTPunches
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1.0)
+    wait(0.5)
+    AnimationId = "3245446707" --MUINSTINCTPunches
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1.0)
+    wait(0.5)
+    AnimationId = "3245446707" --MUINSTINCTPunches
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1.0)
+end)
+
+Window2:Button("Custom Celestial Whirlwind", function(callback)
+    game.ReplicatedStorage.Remotes.Fly:FireServer("\235\140\128\213\161\213\180\213\162\229\139\162\227\129\174\236\137\172\227\129\132");
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("Punish\231\136\134\233\162\168\235\139\164\232\165\178\230\146\131Drive");
+    wait(0.5)
+    AnimationId = "4220157891" --DashFoward
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1.0)
+    wait(0.9)
+    k:Stop() --StopAnim
+    wait(0.0) --StartNextSequence
+    AnimationId = "3245446707" --MUINSTINCTPunches
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1.0)
+    wait(0.9)
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    AnimationId = "6415120054" --TurnsBackorVegito
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1)
+    wait(3.5)
+    k:Stop()
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\230\182\136\227\129\136\196\131\227\130\139\233\150\147\236\151\144\229\139\157\227\129\164");
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179\227\130\170\227\131\149");
+end)
+
+Window2:Button("ZGogeta Style", function(callback)
+    game:GetService("Players").WisemanDog.PlayerGui.CharacterScripts.Combat.CombatStyle.Value = "Angel"
+end)
+
+Window2:Button("GD End Combo", function(callback)
+    game.ReplicatedStorage.Remotes.CombatSwing:FireServer("\230\153\130\233\150\147\236\151\144\229\139\157\227\129\164");
+end)
+
+Window2:Button("Celestial Whirlwind", function(callback)
+  game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    game:GetService("ReplicatedStorage").Remotes.Technique:FireServer("VanishTest")
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("Punish\231\136\134\233\162\168\235\139\164\232\165\178\230\146\131Drive");
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    game:GetService("ReplicatedStorage").Remotes.Technique:FireServer("VanishTest")
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179");
+    game.ReplicatedStorage.Remotes.Meditation:FireServer("\227\130\173\227\131\136\227\131\172\227\130\164\227\131\179\227\130\170\227\131\149");
+end)
+
+Window2:Button("GD Punches", function(callback)
+    AnimationId = "3245446707"
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://"..AnimationId
+    local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+    k:Play()
+    k:AdjustSpeed(1)
+end)
+
+Window2:Button("Spirit Sword", function(callback)
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("\227\130\185SPIRIT\227\131\188\227\131\145\227\131\188\237\149\152\235\130\152\235\139\152\230\139\179\233\160\173");
+    wait(0.4)
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("KiBlastCannonDa");
+end)
+
+Window2:Button("FPSSJ4", function(callback)
+   game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("\225\138\166\227\130\170\227\130\171\227\131\170\227\131\138\196\131\232\182\133\227\130\181\227\130\164\227\131\164\228\186\1864");
+end)
+
+Window2:Button("Soul Punisher", function(callback)
+    game.ReplicatedStorage.Events.SoulPunisherRemote:InvokeServer({ "\233\155\187\216\172\208\177\224\168\176\214\132Charge\213\171\229\133\133\208\184\224\168\154\224\168\190\209\134" });
+wait (2)
+    game.ReplicatedStorage.Events.SoulPunisherRemote:InvokeServer({ "\233\155\162\216\177\214\128\231\129\171Fire\227\129\166\216\179\216\170\213\161\227\130\140\208\166" });
+end)
+
+Window2:Button("Vanish", function(callback)
+game:GetService("ReplicatedStorage").Remotes.Technique:FireServer("VanishTest")
+end)
+
+Window2:Button("Hakai", function(callback)
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("BreakStrike");
+wait (1.1)
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("KiBlastCannonDa");
+end)
+
+Window2:Button("Solar Flare", function(callback)
+    game.ReplicatedStorage.Remotes.PhysicalSkill:FireServer("SolarFlare");
+end)
+
+Window2:Button("No Ego Zone", function(callback)
+    game.ReplicatedStorage.Remotes.Transform:FireServer("\224\164\170\227\130\129\227\129\141\229\173\151\224\168\149\224\169\128HoomanNoEgo");
+end)
+
+Window2:Button("Deform", function(callback)
+    game.ReplicatedStorage.Remotes.Damaged:FireServer("FailToTransform");
+    wait(1.7)
+    game.ReplicatedStorage.Remotes.Transform:FireServer("\229\164\137\229\189\162");
+end)
+
+Window2:Button("LoadForm", function(callback)
+    for i=1, 5 do wait(1.2) game.ReplicatedStorage.Remotes.Damaged:FireServer("FailToTransform");
+    game:GetService("ReplicatedStorage").Remotes.CombatSwing:FireServer("EffectSTA")
+    wait(1.9)
+    game:GetService("ReplicatedStorage").Remotes.Character:FireServer("カメハメハ")
+    game:GetService("ReplicatedStorage").Remotes.OutfitChange:FireServer("GokuMUI")
+    game.ReplicatedStorage.Remotes.Transform:FireServer("\224\164\170\227\130\129\227\129\141\229\173\151\224\168\149\224\169\128HoomanNoEgo");
+    game:GetService("ReplicatedStorage").Remotes.Charging:FireServer("充電")
+    game:GetService("ReplicatedStorage").Remotes.Damaged:FireServer("БитバトДルダメиージ50%")
+    game.ReplicatedStorage.Remotes.Damaged:FireServer("ZenkaiActive");
+end
+end)
+
+library:Ready();
