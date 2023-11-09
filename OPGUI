@@ -277,6 +277,81 @@ Window2:Button("No Ego Zone", function(callback)
     game.ReplicatedStorage.Remotes.Transform:FireServer("\224\164\170\227\130\129\227\129\141\229\173\151\224\168\149\224\169\128HoomanNoEgo");
 end)
 
+Window2:Button("UI EyeChanging", function(callback)
+    local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 0, 0, 0}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.5)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 36, 36, 36}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 56, 56, 56}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 76, 76, 76}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 109, 109, 109}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 118, 118, 118}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 145, 145, 145}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 155, 155, 155}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 165, 165, 165}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+
+wait(0.8)
+
+local eyeColor = "EyeColor\224\168\166\224\168\190s"
+local args = {eyeColor, 171, 171, 171}
+
+game:GetService("ReplicatedStorage").Remotes.HairColor:FireServer(unpack(args))
+end)
+
+Window2:Button("MUI Aura Efx", function(callback)
+    local args = {[1] = "\227\131\128\227\130\185\227\131\136\209\154\227\131\134\227\130\185\227\131\136"}
+    game:GetService("ReplicatedStorage").Remotes.Charging:FireServer(unpack(args))
+end)
+
 Window2:Button("Deform", function(callback)
     game.ReplicatedStorage.Remotes.Damaged:FireServer("FailToTransform");
     wait(1.7)
