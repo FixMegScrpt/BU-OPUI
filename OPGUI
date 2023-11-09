@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://pastebin.com/raw/76yZswDU"))();
 local Window1 = library:CreateSection("Main")
 
 Window1:Button("Auto Farm", function()
-    --By BaansuUchiha and TRP
+    --By xGSMx and TRP
     
     -- Settings
     local SPEED = true -- may cause serious lag
