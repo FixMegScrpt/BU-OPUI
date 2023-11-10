@@ -277,6 +277,11 @@ Window2:Button("No Ego Zone", function(callback)
     game.ReplicatedStorage.Remotes.Transform:FireServer("\224\164\170\227\130\129\227\129\141\229\173\151\224\168\149\224\169\128HoomanNoEgo");
 end)
 
+Window2:Button("UI Dodge Ki Blast", function(callback)
+    local args = { [1] = { [1] = "Dodged", [2] = workspace.JuelzTrainsHarder } }
+    game:GetService("ReplicatedStorage").Remotes.KiBlasts:InvokeServer(unpack(args))
+end)
+
 Window2:Button("UI EyeChanging", function(callback)
     local eyeColor = "EyeColor\224\168\166\224\168\190s"
 local args = {eyeColor, 0, 0, 0}
