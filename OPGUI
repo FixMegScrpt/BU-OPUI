@@ -32,7 +32,7 @@ Window1:Button("Auto Farm", function()
     
     -- Skrrrt
     while true do
-        local v = workspace:FindFirstChild("Name")
+        local v = workspace:FindFirstChild("Training Dummy")
         if typeof(v) == "Instance" then
             repeat
                 del()
