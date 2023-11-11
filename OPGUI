@@ -81,7 +81,7 @@ Window1:Button("UI Dodge w/TP", function(callback)
     local args = {
         [1] = {
             [1] = "Dodged",
-            [2] = workspace.JuelzTrainsHarder,
+            [2] = workspace.ByfronVsChatGPT,
         },
 }
 
@@ -278,7 +278,7 @@ Window2:Button("No Ego Zone", function(callback)
 end)
 
 Window2:Button("UI Dodge Ki Blast", function(callback)
-    local args = { [1] = { [1] = "Dodged", [2] = workspace.JuelzTrainsHarder } }
+    local args = { [1] = { [1] = "Dodged", [2] = workspace.ByfronVsChatGPT } }
     game:GetService("ReplicatedStorage").Remotes.KiBlasts:InvokeServer(unpack(args))
 end)
 
